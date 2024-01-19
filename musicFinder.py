@@ -38,7 +38,6 @@ def normalize_document(doc):
 normalize_corpus = np.vectorize(normalize_document)
 
 norm_corpus = normalize_corpus(list(ms["lyrics"]))
-len(norm_corpus)
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -137,10 +136,10 @@ inputSong = st.text_input("Masukan judul lagu...")
 if st.button("Cari"):
     result = music_finder(song_name=inputSong, songs=song_list, doc_sim=doc_sim_df)
     detail = ms.loc[ms["track_name"].isin(result)]
-    sorted_detail = detail.sort_values(by="track_name")
+    # sorted_detail = detail.sort_values(by="track_name")
 
     st.subheader("Hasil rekomendasi :")
-    for index, row in sorted_detail.iterrows():
+    for index, row in detail.iterrows():
         artist_name = row["artist_name"]
         track_name = row["track_name"]
         release_date = row["release_date"]
