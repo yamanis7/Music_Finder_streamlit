@@ -3,9 +3,6 @@ import nltk
 nltk.download("punkt")
 nltk.download("stopwords")
 
-import pathlib
-
-pathlib.Path().resolve()
 import pandas as pd
 
 ms = pd.read_csv("musicFinder_2.csv")
