@@ -12,7 +12,6 @@ ms = ms[["artist_name", "track_name", "release_date", "genre", "lyrics", "topic"
 
 import re
 import numpy as np
-import contractions
 
 stop_words = nltk.corpus.stopwords.words("english")
 
@@ -22,7 +21,6 @@ def normalize_document(doc):
     doc = re.sub(r"[^a-zA-Z0-9\s]", "", doc, re.I | re.A)
     doc = doc.lower()
     doc = doc.strip()
-    doc = contractions.fix(doc)
     # tokenize document
     tokens = nltk.word_tokenize(doc)
     # filter stopwords out of document
