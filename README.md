@@ -23,5 +23,7 @@ Untuk alur tahapan eksperimen, yaitu:
 10. Nanti output yang dihasilkan adalah musik-musik yang memiliki kemiripan dengan musik yang dicari user
 
 ## Performa Model atau Uji Performa Model
+
+
 ## Proses Deployment
-Untuk deployment, framework yang digunakan adalah streamlit.
+Untuk deployment, saya menggunakan 2 framework, Streamlit dan Django. 
